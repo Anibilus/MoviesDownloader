@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: torrent_db
+-- ------------------------------------------------------
+-- Server version	8.0.41
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `series_episodes`
+--
+
+DROP TABLE IF EXISTS `series_episodes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `series_episodes` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `season_id` int NOT NULL,
+  `episode_number` int NOT NULL,
+  `title` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `season_id` (`season_id`),
+  CONSTRAINT `series_episodes_ibfk_1` FOREIGN KEY (`season_id`) REFERENCES `series_seasons` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `series_episodes`
+--
+
+LOCK TABLES `series_episodes` WRITE;
+/*!40000 ALTER TABLE `series_episodes` DISABLE KEYS */;
+INSERT INTO `series_episodes` VALUES (11,21,1,'Sweet Tooth El nino ciervo - 1ª Temporada - 1x01 al 1x04'),(12,21,1,'Sweet Tooth El nino ciervo - 1ª Temporada - 1x05 al 1x08'),(13,22,1,'Sweet Tooth El nino ciervo - 1ª Temporada [720p] - 1x01 al 1x04'),(14,22,1,'Sweet Tooth El nino ciervo - 1ª Temporada [720p] - 1x05 al 1x08'),(15,23,1,'Un asunto privado - 1ª Temporada - 1x01'),(16,23,1,'Un asunto privado - 1ª Temporada - 1x02'),(17,23,1,'Un asunto privado - 1ª Temporada - 1x03'),(18,23,1,'Un asunto privado - 1ª Temporada - 1x04'),(19,23,1,'Un asunto privado - 1ª Temporada - 1x05'),(20,23,1,'Un asunto privado - 1ª Temporada - 1x06'),(21,23,1,'Un asunto privado - 1ª Temporada - 1x07'),(22,23,1,'Un asunto privado - 1ª Temporada - 1x08'),(23,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x01'),(24,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x02'),(25,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x03'),(26,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x04'),(27,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x05'),(28,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x06'),(29,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x07'),(30,24,1,'Un asunto privado - 1ª Temporada [720p] - 1x08'),(31,25,1,'10 razones para odiarte - 1ª Temporada - 1x01 - 02.'),(32,25,1,'10 razones para odiarte - 1ª Temporada - 1x03 - 04.'),(33,25,1,'10 razones para odiarte - 1ª Temporada - 1x05 - 06.'),(34,25,1,'10 razones para odiarte - 1ª Temporada - 1x07 - 08.'),(35,25,1,'10 razones para odiarte - 1ª Temporada - 1x09 - 10.'),(36,25,1,'10 razones para odiarte - 1ª Temporada - 1x11 - 12.'),(37,25,1,'10 razones para odiarte - 1ª Temporada - 1x13 al 20.'),(38,26,10,'10.5 Apocalypse - Miniserie - 10.5 Apocalypse - Miniserie.'),(39,27,1,'11-22-63 - Miniserie [720p] - 1x01 -'),(40,27,1,'11-22-63 - Miniserie [720p] - 1x02 -'),(41,27,1,'11-22-63 - Miniserie [720p] - 1x03 -'),(42,27,1,'11-22-63 - Miniserie [720p] - 1x04 -'),(43,27,1,'11-22-63 - Miniserie [720p] - 1x05 -'),(44,27,1,'11-22-63 - Miniserie [720p] - 1x06 -'),(45,27,1,'11-22-63 - Miniserie [720p] - 1x07 -'),(46,27,1,'11-22-63 - Miniserie [720p] - 1x08 -'),(47,28,1,'11-22-63 - Miniserie - 1x01 -'),(48,28,1,'11-22-63 - Miniserie - 1x02 -'),(49,28,1,'11-22-63 - Miniserie - 1x03 -'),(50,28,1,'11-22-63 - Miniserie - 1x04 -'),(51,28,1,'11-22-63 - Miniserie - 1x05 -'),(52,28,1,'11-22-63 - Miniserie - 1x06 -'),(53,28,1,'11-22-63 - Miniserie - 1x07 -'),(54,28,1,'11-22-63 - Miniserie - 1x08 -'),(55,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x01 -'),(56,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x02 -'),(57,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x03 -'),(58,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x04 -'),(59,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x05 -'),(60,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x06 -'),(61,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x07 -'),(62,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x08 -'),(63,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x09 -'),(64,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x10 -'),(65,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x11 -'),(66,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x12 -'),(67,29,1,'12 monos (Doce monos) - 1ª Temporada - 1x13 -'),(68,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x01 -'),(69,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x02 -'),(70,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x03 -'),(71,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x04 -'),(72,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x05 -'),(73,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x06 -'),(74,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x07 -'),(75,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x08 -'),(76,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x09 -'),(77,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x10 -'),(78,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x11 -'),(79,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x12 -'),(80,30,1,'12 monos (Doce monos) - 1ª Temporada [720p] - 1x13 -'),(81,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x01 -'),(82,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x02 -'),(83,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x03 -'),(84,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x04 -'),(85,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x05 -'),(86,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x06 -'),(87,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x07 -'),(88,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x08 -'),(89,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x09 -'),(90,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x10 -'),(91,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x11 -'),(92,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x12 -'),(93,31,2,'12 monos (Doce monos) - 2ª Temporada - 2x13 -'),(94,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x01 al 2x07.'),(95,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x08 -'),(96,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x09 -'),(97,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x10 -'),(98,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x11 -'),(99,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x12 -'),(100,32,2,'12 monos (Doce monos) - 2ª Temporada [720p] - 2x13 -'),(101,33,3,'12 monos (Doce monos) - 3ª Temporada [720p] - 3x01 -'),(102,33,3,'12 monos (Doce monos) - 3ª Temporada [720p] - 3x02 al 04.'),(103,33,3,'12 monos (Doce monos) - 3ª Temporada [720p] - 3x05 al 07.'),(104,33,3,'12 monos (Doce monos) - 3ª Temporada [720p] - 3x08 al 10.'),(105,34,4,'12 monos - 4ª Temporada - 4x01'),(106,34,4,'12 monos - 4ª Temporada - 4x02'),(107,34,4,'12 monos - 4ª Temporada - 4x03'),(108,34,4,'12 monos - 4ª Temporada - 4x04'),(109,34,4,'12 monos - 4ª Temporada - 4x05'),(110,34,4,'12 monos - 4ª Temporada - 4x06'),(111,34,4,'12 monos - 4ª Temporada - 4x07'),(112,34,4,'12 monos - 4ª Temporada - 4x08'),(113,34,4,'12 monos - 4ª Temporada - 4x09'),(114,34,4,'12 monos - 4ª Temporada - 4x10'),(115,34,4,'12 monos - 4ª Temporada - 4x11'),(116,35,4,'12 monos - 4ª Temporada [720p] - 4x01'),(117,35,4,'12 monos - 4ª Temporada [720p] - 4x02'),(118,35,4,'12 monos - 4ª Temporada [720p] - 4x03'),(119,35,4,'12 monos - 4ª Temporada [720p] - 4x04'),(120,35,4,'12 monos - 4ª Temporada [720p] - 4x05'),(121,35,4,'12 monos - 4ª Temporada [720p] - 4x06'),(122,35,4,'12 monos - 4ª Temporada [720p] - 4x07'),(123,35,4,'12 monos - 4ª Temporada [720p] - 4x08'),(124,35,4,'12 monos - 4ª Temporada [720p] - 4x09'),(125,35,4,'12 monos - 4ª Temporada [720p] - 4x10'),(126,35,4,'12 monos - 4ª Temporada [720p] - 4x11'),(127,36,1,'14 de abril, la República - 1ª Temporada [720p] - 1x01 al 1x13.'),(128,37,2,'14 de abril, la República - 2ª Temporada - 2x01 -'),(129,37,2,'14 de abril, la República - 2ª Temporada - 2x02 -'),(130,37,2,'14 de abril, la República - 2ª Temporada - 2x03 -'),(131,37,2,'14 de abril, la República - 2ª Temporada - 2x04 -'),(132,37,2,'14 de abril, la República - 2ª Temporada - 2x05 -'),(133,37,2,'14 de abril, la República - 2ª Temporada - 2x06 -'),(134,37,2,'14 de abril, la República - 2ª Temporada - 2x07 -'),(135,37,2,'14 de abril, la República - 2ª Temporada - 2x08 -'),(136,37,2,'14 de abril, la República - 2ª Temporada - 2x09 -'),(137,37,2,'14 de abril, la República - 2ª Temporada - 2x10 -'),(138,37,2,'14 de abril, la República - 2ª Temporada - 2x11 -'),(139,37,2,'14 de abril, la República - 2ª Temporada - 2x12 -'),(140,37,2,'14 de abril, la República - 2ª Temporada - 2x13 -'),(141,37,2,'14 de abril, la República - 2ª Temporada - 2x14 -'),(142,37,2,'14 de abril, la República - 2ª Temporada - 2x15 -'),(143,37,2,'14 de abril, la República - 2ª Temporada - 2x16 -'),(144,37,2,'14 de abril, la República - 2ª Temporada - 2x17 -'),(145,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x03 -'),(146,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x04 -'),(147,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x05 -'),(148,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x06 -'),(149,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x07 -'),(150,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x08 -'),(151,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x09 -'),(152,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x10 -'),(153,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x11 -'),(154,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x12 -'),(155,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x13 -'),(156,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x14 -'),(157,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x15 -'),(158,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x16 -'),(159,38,2,'14 de abril, la República - 2ª Temporada [720p] - 2x17 -');
+/*!40000 ALTER TABLE `series_episodes` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-02-19  1:13:22
